@@ -1,4 +1,4 @@
-function Header() {
+function Header({ onOpen }) {
   return (
     <>
       <header className='header'>
@@ -11,7 +11,12 @@ function Header() {
         </div>
         <div className='headerRight'>
           <li>
-            <img alt='card' src='/img/card.svg' />
+            <img
+              className='cart'
+              onClick={onOpen}
+              alt='cart'
+              src='/img/card.svg'
+            />
             <span>1205 руб.</span>
           </li>
           <li>
